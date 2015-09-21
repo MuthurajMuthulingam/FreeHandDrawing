@@ -14,6 +14,8 @@
 		6629DEBE1BAFBF3C005391A8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6629DEBD1BAFBF3C005391A8 /* Images.xcassets */; };
 		6629DEC11BAFBF3C005391A8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6629DEBF1BAFBF3C005391A8 /* LaunchScreen.xib */; };
 		6629DECD1BAFBF3C005391A8 /* FreeHandDrawingSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6629DECC1BAFBF3C005391A8 /* FreeHandDrawingSampleTests.m */; };
+		6629DED81BAFBF96005391A8 /* FreeHandView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6629DED71BAFBF96005391A8 /* FreeHandView.m */; };
+		6629DEDD1BAFC6FC005391A8 /* CacheFreeHandView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6629DEDC1BAFC6FC005391A8 /* CacheFreeHandView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		6629DEC61BAFBF3C005391A8 /* FreeHandDrawingSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeHandDrawingSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6629DECB1BAFBF3C005391A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6629DECC1BAFBF3C005391A8 /* FreeHandDrawingSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreeHandDrawingSampleTests.m; sourceTree = "<group>"; };
+		6629DED61BAFBF96005391A8 /* FreeHandView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeHandView.h; sourceTree = "<group>"; };
+		6629DED71BAFBF96005391A8 /* FreeHandView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeHandView.m; sourceTree = "<group>"; };
+		6629DEDB1BAFC6FB005391A8 /* CacheFreeHandView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheFreeHandView.h; sourceTree = "<group>"; };
+		6629DEDC1BAFC6FC005391A8 /* CacheFreeHandView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheFreeHandView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,10 @@
 				6629DEBD1BAFBF3C005391A8 /* Images.xcassets */,
 				6629DEBF1BAFBF3C005391A8 /* LaunchScreen.xib */,
 				6629DEB01BAFBF3B005391A8 /* Supporting Files */,
+				6629DED61BAFBF96005391A8 /* FreeHandView.h */,
+				6629DED71BAFBF96005391A8 /* FreeHandView.m */,
+				6629DEDB1BAFC6FB005391A8 /* CacheFreeHandView.h */,
+				6629DEDC1BAFC6FC005391A8 /* CacheFreeHandView.m */,
 			);
 			path = FreeHandDrawingSample;
 			sourceTree = "<group>";
@@ -219,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6629DEDD1BAFC6FC005391A8 /* CacheFreeHandView.m in Sources */,
 				6629DEB91BAFBF3C005391A8 /* ViewController.m in Sources */,
+				6629DED81BAFBF96005391A8 /* FreeHandView.m in Sources */,
 				6629DEB61BAFBF3C005391A8 /* AppDelegate.m in Sources */,
 				6629DEB31BAFBF3C005391A8 /* main.m in Sources */,
 			);
