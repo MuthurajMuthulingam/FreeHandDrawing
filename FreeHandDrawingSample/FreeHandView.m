@@ -11,6 +11,7 @@
 @interface FreeHandView ()
 {
     UIBezierPath *path; // (3)
+    UIBezierPath *finalBuiltupPath;
 }
 @end
 
@@ -22,8 +23,7 @@
     {
         [self setMultipleTouchEnabled:NO]; // (2)
         [self setBackgroundColor:[UIColor whiteColor]];
-        path = [UIBezierPath bezierPath];
-        [path setLineWidth:2.0];
+        [self createNewPath];
     }
     return self;
 }
@@ -32,11 +32,19 @@
 {
     [[UIColor blackColor] setStroke];
     [path stroke];
+    [[UIColor greenColor] setStroke];
+    [finalBuiltupPath stroke];
 }
 
+- (void)createNewPath
+{
+    path = [UIBezierPath bezierPath];
+    [path setLineWidth:2.0];
+}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [self erase];
     UITouch *touch = [touches anyObject];
     CGPoint p = [touch locationInView:self];
     [path moveToPoint:p];
@@ -47,6 +55,8 @@
     UITouch *touch = [touches anyObject];
     CGPoint p = [touch locationInView:self];
     [path addLineToPoint:p]; // (4)
+    finalBuiltupPath = [UIBezierPath bezierPathWithRect:path.bounds];
+    [finalBuiltupPath setLineWidth:2.0];
     [self setNeedsDisplay];
 }
 
@@ -58,6 +68,12 @@
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self touchesEnded:touches withEvent:event];
+}
+- (void)erase
+{
+    path = nil;
+    [self createNewPath];
+    [self setNeedsDisplay];
 }
 
 @end
